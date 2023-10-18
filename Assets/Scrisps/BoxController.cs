@@ -12,6 +12,10 @@ public class BoxController : MonoBehaviour
     private Animator animator;
     public bool gameOver;
 
+    //Audio Variables
+    private AudioSource crateAudio;
+    public AudioClip crateDeath;
+
     void Start()
     {
         //Just to be safe
@@ -21,6 +25,8 @@ public class BoxController : MonoBehaviour
         boxBod = GetComponent<Rigidbody>();
         //Gets this box freak's animator
         animator = GetComponent<Animator>();
+        //Gets this box freak's audio source
+        crateAudio = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -32,10 +38,12 @@ public class BoxController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("Obstacle") && gameOver == false)
         {
             gameOver = true;
             animator.SetBool("gameOver", true);
+            crateAudio.PlayOneShot(crateDeath);
+            Debug.Log("L Bozo");
         }
     }
 }
