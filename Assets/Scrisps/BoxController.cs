@@ -11,10 +11,12 @@ public class BoxController : MonoBehaviour
     private Rigidbody boxBod;
     private Animator animator;
     public bool gameOver;
+    public ParticleSystem boxFire;
 
     //Audio Variables
     private AudioSource crateAudio;
     public AudioClip crateDeath;
+    public AudioClip jumpFlapNoise;
 
     void Start()
     {
@@ -34,6 +36,7 @@ public class BoxController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && gameOver == false)
         {
             boxBod.AddForce(Vector3.up * boingForce, ForceMode.Impulse);
+            crateAudio.PlayOneShot(jumpFlapNoise);
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -44,6 +47,12 @@ public class BoxController : MonoBehaviour
             animator.SetBool("gameOver", true);
             crateAudio.PlayOneShot(crateDeath);
             Debug.Log("L Bozo");
+            Invoke("SetOnFire", 3);
         }
+    }
+
+    void SetOnFire()
+    {
+        boxFire.Play();
     }
 }
