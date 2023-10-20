@@ -138,12 +138,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d789e0708f9b13f419a54b1f8081839c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.3
+      value: -11.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d789e0708f9b13f419a54b1f8081839c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.6
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d789e0708f9b13f419a54b1f8081839c,
         type: 3}
@@ -662,8 +662,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialDelay: 3
-  maxDelay: 2
-  minDelay: 4
+  maxDelay: 3
+  minDelay: 5
   maxHeight: 4.5
   minHeight: -3
   crateWall: {fileID: 8440981365712272702, guid: 75f7532361186764a9ce4b8bcac44fe2,
@@ -683,7 +683,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
@@ -764,7 +764,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d789e0708f9b13f419a54b1f8081839c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.62857145
+      value: 0.629
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d789e0708f9b13f419a54b1f8081839c,
         type: 3}
@@ -833,7 +833,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d789e0708f9b13f419a54b1f8081839c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.3
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d789e0708f9b13f419a54b1f8081839c,
         type: 3}
@@ -977,9 +977,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278e0af025f3d4f43ae52a72a8b4fbe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialDelay: 10
+  initialDelay: 15
   maxDelay: 20
-  minDelay: 31
+  minDelay: 30
   maxHeight: 0
   minHeight: 0
   crateWall: {fileID: 3045854020608477129, guid: 64a7cd9be4ff87f47b24a9f0abfc74a2,
@@ -999,7 +999,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1336583077
 GameObject:
@@ -1044,7 +1044,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1769402677 stripped
 Transform:
@@ -1134,7 +1134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058433665}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4834502, y: -6.342018, z: -14.041595}
+  m_LocalPosition: {x: -2.5, y: -6.5, z: -14.041595}
   m_LocalScale: {x: 35, y: 0.5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:

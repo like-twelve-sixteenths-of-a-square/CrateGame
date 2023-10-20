@@ -58,7 +58,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a9da72e628da442ad3325ff6fb5acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
 --- !u!1 &8440981365712272702
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf24ae54b3121d479b988f8e11a7a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1001 &8440981364691489628
 PrefabInstance:
   m_ObjectHideFlags: 0

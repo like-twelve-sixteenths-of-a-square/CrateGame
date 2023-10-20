@@ -9,7 +9,9 @@ public class SpawnerScript : MonoBehaviour
     public float maxDelay;
     public float minDelay;
 
-    //WallHeightVaribles
+   
+
+    //Wall Height Varibles
     public float maxHeight;
     public float minHeight;
 
@@ -26,14 +28,14 @@ public class SpawnerScript : MonoBehaviour
         boxContact = GameObject.Find("BoxFreak").GetComponent<BoxController>();
 
         //Invokes the spawner code to run
-        InvokeRepeating("SpawnBox", initialDelay, Random.Range(minDelay, maxDelay));
+        InvokeRepeating("BoxScript", initialDelay, Random.Range(minDelay, maxDelay));
     }
 
-    void SpawnBox()
+    void BoxScript()
     {
-        //The spawner code. Spawns boxes at a random interval until the game is over.
         if (boxContact.gameOver == false)
         {
+            //Generates a box wall at a random height with complementary particles.
             Instantiate(crateWall, transform.position + new Vector3(0, Random.Range(minHeight, maxHeight), 0), transform.rotation);
             Instantiate(particles, transform.position + new Vector3(0, 0, 1), transform.rotation);
         }

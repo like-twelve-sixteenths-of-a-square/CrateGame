@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class ObstacleMovement : MonoBehaviour
 {
     //Box freak's contact
     private BoxController boxContact;
+
+    public float speed;
 
     void Start()
     {
@@ -20,7 +23,7 @@ public class ObstacleMovement : MonoBehaviour
         //Moves as long as the game is not over.
         if (boxContact.gameOver == false)
         {
-            transform.Translate(Vector3.left * 5 * Time.deltaTime);
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
     }
 

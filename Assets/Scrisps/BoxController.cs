@@ -18,6 +18,9 @@ public class BoxController : MonoBehaviour
     public AudioClip crateDeath;
     public AudioClip jumpFlapNoise;
 
+    //Score Variable(s)
+    private ScoreTally scoreTally;
+
     void Start()
     {
         //Just to be safe
@@ -29,6 +32,8 @@ public class BoxController : MonoBehaviour
         animator = GetComponent<Animator>();
         //Gets this box freak's audio source
         crateAudio = GetComponent<AudioSource>();
+        //Gets the score tally from the point master
+        scoreTally = GameObject.Find("PointMaster").GetComponent<ScoreTally>();
     }
     void Update()
     {
@@ -47,12 +52,13 @@ public class BoxController : MonoBehaviour
             animator.SetBool("gameOver", true);
             crateAudio.PlayOneShot(crateDeath);
             Debug.Log("L Bozo");
-            Invoke("SetOnFire", 3);
+            Invoke("DeathSequence", 3);
         }
     }
 
-    void SetOnFire()
+    void DeathSequence()
     {
         boxFire.Play();
+        Debug.Log("Final Score: " + scoreTally.score);
     }
 }
